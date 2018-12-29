@@ -265,8 +265,9 @@
 		}
 		imgs1.onmousemove = function(ev){
    			 var ev = ev || event;
+			 var s = document.documentElement.scrollTop;
    			 var left = ev.clientX-imgs.offsetLeft-slider.offsetWidth/2;
-    		 var top = ev.clientY-imgs.offsetTop-slider.offsetHeight/2+200;
+    		 var top = ev.clientY-imgs.offsetTop-slider.offsetHeight/2+s;
     		 var maxLeft = imgs1.offsetWidth-slider.offsetWidth;
     		 var maxTop = imgs1.offsetHeight-slider.offsetHeight;
    			 left = left > maxLeft ? maxLeft : left<0 ? 0 : left;
